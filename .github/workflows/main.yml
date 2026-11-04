@@ -17,7 +17,7 @@ jobs:
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /usr/local/share/powershell /usr/share/swift /crystal /etc/mysql /etc/php
         sudo apt-get -y update
-        sudo apt-get -y install ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib git gperf haveged lzma lksctp-tools zlib1g-dev libc6-dev-i386 libelf-dev libglib2.0-dev libnotify-dev libreadline-dev libssl-dev libtool ltool lrzsz mkisofs nano ninja-build p7zip p7zip-full patch pkg-config python3 python3-pip python3-ply python3-docutils qemu-utils rsync scons squashfs-tools subversion swig texinfo u-boot-tools upx-ucl unzip nodejs vim wget xmlto xz-utils zlib1g-dev
+        sudo apt-get -y install ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib git gperf haveged lzma lksctp-tools zlib1g-dev libc6-dev-i386 libelf-dev libglib2.0-dev libnotify-dev libreadline-dev libssl-dev libtool lrzsz mkisofs nano ninja-build p7zip p7zip-full patch pkg-config python3 python3-pip python3-ply python3-docutils qemu-utils rsync scons squashfs-tools subversion swig texinfo u-boot-tools upx-ucl unzip nodejs vim wget xmlto xz-utils zlib1g-dev
         sudo apt-get -y autoremove --purge
         sudo apt-get -y clean
 
@@ -33,7 +33,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
-    # 【核心安全机制】启动远程交互，在这里你可以亲自把关，不抓瞎
+    # 【核心安全机制】启动远程交互
     - name: Setup tmate session for Custom Web Config
       uses: mxschmitt/action-tmate@v3
       timeout-minutes: 30
